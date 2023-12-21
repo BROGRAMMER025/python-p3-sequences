@@ -1,4 +1,15 @@
 #!/usr/bin/env python3
 
 def print_fibonacci(length):
-    pass
+   
+    if length == 0:
+        print("[]")
+        return
+
+    fibonacci_list = [0, 1]
+    while len(fibonacci_list) < length:
+        next_number = fibonacci_list[-1] + fibonacci_list[-2]
+        fibonacci_list.append(next_number)
+
+    print(fibonacci_list[:length])
+print_fibonacci(9)
